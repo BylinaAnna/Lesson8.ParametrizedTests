@@ -1,13 +1,9 @@
-import com.codeborne.selenide.Condition;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
-import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Condition.empty;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
