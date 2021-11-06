@@ -30,7 +30,6 @@ class ParametrizedTests extends TestBases {
         $("#firstName").setValue(firstname);
         $("#lastName").setValue(lastname).pressTab();
         $("#userEmail").shouldBe(empty);
-        Assertions.assertTrue(true);
     }
 
     enum Gender {
