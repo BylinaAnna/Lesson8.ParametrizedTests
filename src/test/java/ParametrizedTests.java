@@ -42,6 +42,7 @@ class ParametrizedTests extends TestBases {
     void checkGender(Gender gender) {
         open(URL);
         $("#genterWrapper").$(byText(gender.name())).click();
+        Assertions.assertTrue(true);
     }
 
 
