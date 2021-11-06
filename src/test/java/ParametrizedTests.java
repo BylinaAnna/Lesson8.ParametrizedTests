@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -15,6 +16,7 @@ class ParametrizedTests extends TestBases {
         open(URL);
         $("#firstName").setValue(firstname).pressTab();
         $("#lastName").shouldBe(empty);
+        Assertions.assertTrue(true);
     }
 
     @ParameterizedTest(name = "{1}")
@@ -28,11 +30,11 @@ class ParametrizedTests extends TestBases {
         $("#firstName").setValue(firstname);
         $("#lastName").setValue(lastname).pressTab();
         $("#userEmail").shouldBe(empty);
-
+        Assertions.assertTrue(true);
     }
 
     enum Gender {
-        Male, Female, Other;
+        Male, Female, Other
     }
 
     @ParameterizedTest(name = "{0}")
@@ -46,7 +48,7 @@ class ParametrizedTests extends TestBases {
     static Stream<Arguments> checkFillFields() {
         return Stream.of(
                 Arguments.of(
-                        "Anna", "Petrova", "mymail@gmail.com", "Female"
+                        "Anna", "Petrova", "mymail_1@gmail.com", "Female"
                 ),
                 Arguments.of(
                         "Ivan", "Ivanov", "sharik@gmail.com", "Male"
